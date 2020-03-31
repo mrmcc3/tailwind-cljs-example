@@ -1,4 +1,4 @@
-(ns ^:figwheel-hooks tailwind.example.app
+(ns tailwind.example.app
   (:require
     [reagent.core :as r]
     [reagent.dom :as dom]))
@@ -32,7 +32,7 @@
                       transform transition ease-in-out duration-200]
                     (if @toggled 'translate-x-5 'translate-x-0))}]]]]]]]])
 
-(defn ^:after-load render []
+(defn ^:dev/after-load render []
   (dom/render [app] (js/document.getElementById "app")))
 
 (defn ^:export main []

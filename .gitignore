@@ -1,10 +1,12 @@
 .cpcache
+.shadow-cljs
 
 .idea
 *.iml
 
 node_modules
 
-/resources/public/app.css
-/resources/public/app.js
-/resources/public/cljs-runtime
+/public/app.css
+/public/app.js
+/public/manifest.edn
+/public/cljs-runtime
