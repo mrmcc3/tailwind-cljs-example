@@ -1,0 +1,19 @@
+{
+  "name": "tailwind-cljs-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Michael McClintock",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@tailwindcss/ui": "^0.1.3",
+    "clean-css-cli": "^4.3.0",
+    "purgecss": "^2.1.0",
+    "tailwindcss": "^1.2.0"
+  },
+  "scripts": {
+    "tailwind-css": "tailwind build src/tailwind/example/app.css -o resources/public/app.css",
+    "purge-css": "purgecss -c purgecss.config.js -o resources/public",
+    "clean-css": "cleancss -o resources/public/app.css resources/public/app.css"
+  }
+}
