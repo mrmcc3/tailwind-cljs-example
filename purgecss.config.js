@@ -1,5 +1,5 @@
 module.exports = {
   content: ["src/**/*.cljs"],
-  css: ["resources/public/app.css"],
+  css: ["public/app.css"],
   defaultExtractor: (content) => content.match(/[\w-/.:]+(?<!:)/g) || [],
 };
