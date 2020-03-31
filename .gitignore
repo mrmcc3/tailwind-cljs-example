@@ -1,10 +1,5 @@
 .cpcache
-
 .idea
 *.iml
-
 node_modules
-
-/resources/public/app.css
-/resources/public/app.js
-/resources/public/cljs-runtime
+out

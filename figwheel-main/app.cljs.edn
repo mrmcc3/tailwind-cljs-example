@@ -1,0 +1,4 @@
+{:output-dir "resources/public/out/cljs-runtime"
+ :output-to  "resources/public/out/app.js"
+ :asset-path "/out/cljs-runtime"
+ :main       tailwind.example.app}

@@ -18,7 +18,7 @@
        [:div {:class '[mt-5 sm:mt-0 sm:ml-6 sm:flex-shrink-0 sm:flex sm:items-center]}
         [:span
          {:role     "checkbox"
-          :tabindex "0"
+          :tabIndex "0"
           :on-click #(swap! toggled not)
           :class    (conj
                       '[relative inline-block flex-no-shrink h-6 w-11 border-2
