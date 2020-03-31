@@ -1,0 +1,29 @@
+{
+  "name": "tailwind-shadow-cljs-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Michael McClintock",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "@tailwindcss/ui": "^0.1.3",
+    "clean-css-cli": "^4.3.0",
+    "purgecss": "^2.1.0",
+    "rimraf": "^3.0.2",
+    "shadow-cljs": "^2.8.94",
+    "tailwindcss": "^1.2.0"
+  },
+  "scripts": {
+    "tailwind-css": "tailwind build src/tailwind/example/app.css -o public/out/app.css",
+    "purge-css": "purgecss -c purgecss.config.js -o public/out",
+    "clean-css": "cleancss -o public/out/app.css public/out/app.css",
+    "release-css": "yarn tailwind-css && yarn purge-css && yarn clean-css",
+    "cleanup": "rimraf public/out/cljs-runtime public/out/manifest.edn",
+    "dev": "yarn tailwind-css && yarn shadow-cljs watch app",
+    "build": "yarn release-css && yarn shadow-cljs release app && yarn cleanup"
+  },
+  "dependencies": {
+    "react": "16.13.0",
+    "react-dom": "16.13.0"
+  }
+}
