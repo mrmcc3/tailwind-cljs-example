@@ -5,13 +5,10 @@ set -e
 rm -rf resources/public/out
 
 # generate full tailwind css
-yarn tailwind-css
-
-# purge unused css
-yarn purge-css
+NODE_ENV=production npx tailwind build src/tailwind/example/app.css --output resources/public/out/app.css
 
 # minify css
-yarn clean-css
+npx cleancss -o resources/public/out/app.css resources/public/out/app.css
 
 # build cljs in advanced mode
 clojure -m figwheel.main -O advanced -bo app

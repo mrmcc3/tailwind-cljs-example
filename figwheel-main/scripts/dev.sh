@@ -5,7 +5,7 @@ set -e
 rm -rf resources/public/out
 
 # generate full tailwind css
-yarn tailwind-css
+npx tailwind build src/tailwind/example/app.css --output resources/public/out/app.css
 
 # start figwheel
 clojure -m figwheel.main -b app
